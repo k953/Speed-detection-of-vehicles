@@ -32,14 +32,8 @@ The system follows a **tracking-by-detection** approach:
 
 
 
+<img width="968" height="256" alt="image" src="https://github.com/user-attachments/assets/e257a46c-96e0-4aeb-bb03-89cefdbfe391" />
 
-Speed-detection-of-vehicles/
-│
-├── highway.mp4 # Original highway traffic video
-├── highway_mini.mp4 # Short test video for quick execution
-├── speed_estimate.ipynb # Main notebook for speed estimation
-├── tracker.py # Custom vehicle tracking implementation
-└── README.md
 
 
 ---
