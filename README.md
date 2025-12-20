@@ -1,65 +1,111 @@
-# 🚗 Speed Detection of Vehicles using Computer Vision
+# 🚗 Vehicle Speed Detection using Computer Vision
 
-This project detects vehicles from a highway video and estimates their speed using object tracking and distance-time calculation.
-
----
-
-## 📌 Features
-- Vehicle detection from video
-- Vehicle tracking with unique IDs
-- Speed estimation using distance and time
-- Simple and lightweight implementation
-- Works on recorded highway videos
+This project implements a **vehicle speed detection system** using classical computer vision techniques.  
+It processes highway traffic videos, tracks vehicles across frames, and estimates their speed based on distance traveled over time.
 
 ---
 
-## 🧠 Workflow
+## 📌 Project Overview
 
-<img width="840" height="445" alt="image" src="https://github.com/user-attachments/assets/1f3eef66-2c2c-48ae-a6a3-970c9276c053" />
+Vehicle speed estimation is an important component of modern **intelligent traffic monitoring systems**.  
+This project demonstrates how speed can be calculated from video streams using **object tracking and motion analysis** without relying on additional hardware sensors.
+
+---
+
+## 🧠 Methodology
+
+The system follows a **tracking-by-detection** approach:
+
+1. Video is read frame-by-frame using OpenCV
+2. Vehicles are detected in each frame
+3. Each vehicle is assigned a unique ID using a custom tracker
+4. Vehicle movement is tracked across frames
+5. Speed is calculated using distance traveled and time elapsed
+
+---
+
+## 🔁 Processing Pipeline
+
+
+
+<img width="653" height="430" alt="image" src="https://github.com/user-attachments/assets/a1a1081d-2742-4fbe-9954-921a7adec495" />
 
 
 
 
 Speed-detection-of-vehicles/
 │
-├── highway.mp4 # Input highway video
-├── highway_mini.mp4 # Short test video
-├── speed_estimate.ipynb # Main notebook
-├── tracker.py # Vehicle tracking logic
+├── highway.mp4 # Original highway traffic video
+├── highway_mini.mp4 # Short test video for quick execution
+├── speed_estimate.ipynb # Main notebook for speed estimation
+├── tracker.py # Custom vehicle tracking implementation
 └── README.md
 
 
 ---
 
 ## ⚙️ Technologies Used
-- Python
-- OpenCV (cv2)
-- Computer Vision
-- Jupyter Notebook
-- Object Tracking
+
+- **Python**
+- **OpenCV (cv2)**
+- **Computer Vision**
+- **Object Tracking**
+- **Jupyter Notebook**
 
 ---
 
-## ▶️ How to Run
+## 📐 Speed Estimation Logic
 
-1. Clone the repository
+Vehicle speed is calculated using the formula:
+
+
+
+Speed = Distance / Time
+
+
+Where:
+- Distance is computed from pixel displacement between frames
+- Pixel distance is converted to real-world distance using a scale factor
+- Time is derived from frame count and video FPS
+
+---
+
+## ▶️ How to Run the Project
+
+1. Clone the repository:
 ```bash
 git clone https://github.com/k953/Speed-detection-of-vehicles.git
 
 
-Open Jupyter Notebook
+Open Jupyter Notebook:
 
 jupyter notebook
 
 
-Run speed_estimate.ipynb
+Run:
+
+speed_estimate.ipynb
 
 📊 Applications
 
-Traffic monitoring
+Traffic speed monitoring
+
+Highway surveillance systems
+
+Smart city traffic analytics
 
 Speed violation detection
 
-Smart traffic systems
+Intelligent transportation systems (ITS)
 
-Highway surveillance
+🚀 Future Enhancements
+
+Integration with YOLO for robust vehicle detection
+
+Multi-lane speed estimation
+
+Real-time CCTV camera support
+
+License plate recognition (ANPR integration)
+
+Speed violation alerts
