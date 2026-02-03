@@ -50,3 +50,55 @@
         │ ID + Bounding Box +    │
         │ Speed on Video Frame   │
         └────────────────────────┘
+
+
+
+OR
+
+        ┌───────────────┐
+        │   highway.mp4 │
+        │  (Video Input)│
+        └───────┬───────┘
+                │
+                ▼
+        ┌────────────────┐
+        │ Frame Extraction│
+        │   (OpenCV)     │
+        └───────┬────────┘
+                │
+                ▼
+        ┌────────────────┐
+        │ Object Detection│
+        │     YOLOv8     │
+        │ (x,y,w,h) box │
+        └───────┬────────┘
+                │
+                ▼
+        ┌────────────────────────┐
+        │ Custom Object Tracking │
+        │ Centroid-based Algo    │
+        │ (Distance Matching)    │
+        └───────┬────────────────┘
+                │
+                ▼
+        ┌────────────────┐
+        │ Distance Calc  │
+        │ (Pixel space)  │
+        └───────┬────────┘
+                │
+                ▼
+        ┌────────────────┐
+        │ Time Calc (FPS)│
+        └───────┬────────┘
+                │
+                ▼
+        ┌────────────────┐
+        │ Speed Estimation│
+        │ m/s → km/h     │
+        └───────┬────────┘
+                │
+                ▼
+        ┌────────────────────────┐
+        │ Output Visualization   │
+        │ Box + ID + Speed       │
+        └────────────────────────┘
