@@ -1,1 +1,52 @@
 
+        ┌───────────────┐
+        │     Video     │
+        │ (Live / File) │
+        └───────┬───────┘
+                │
+                ▼
+        ┌────────────────┐
+        │ Frame Extraction│
+        │   (OpenCV)     │
+        └───────┬────────┘
+                │
+                ▼
+        ┌────────────────┐
+        │ Object Detection│
+        │     YOLOv11     │
+        │ (x,y,w,h) boxes│
+        └───────┬────────┘
+                │
+                ▼
+        ┌──────────────────────────┐
+        │ Custom Object Tracking   │
+        │ Centroid-based Algorithm │
+        │  - Center calculation   │
+        │  - Distance matching    │
+        │  - Unique Object ID     │
+        └───────┬──────────────────┘
+                │
+                ▼
+        ┌────────────────┐
+        │ Distance Calc  │
+        │  (Pixel space) │
+        └───────┬────────┘
+                │
+                ▼
+        ┌────────────────┐
+        │ Time Estimation│
+        │   (Using FPS)  │
+        └───────┬────────┘
+                │
+                ▼
+        ┌────────────────┐
+        │ Speed Estimation│
+        │ Speed = D / T  │
+        └───────┬────────┘
+                │
+                ▼
+        ┌────────────────────────┐
+        │ Output Visualization   │
+        │ ID + Bounding Box +    │
+        │ Speed on Video Frame   │
+        └────────────────────────┘
