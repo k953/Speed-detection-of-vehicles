@@ -116,3 +116,82 @@ YOLOv8 is used for object detection, a centroid-based tracking algorithm maintai
 YOLOv8 detects vehicles in each frame and outputs bounding boxes.
 A custom centroid-based tracking algorithm assigns unique IDs by comparing Euclidean distance between object centers across frames.
 The displacement of each object is calculated and divided by the time difference derived from FPS to estimate speed, which is finally converted to km/h.”
+
+
+
+4️⃣ INTERVIEW QUESTIONS – KITNE TYPE PUCH SAKTE HAIN?
+🔥 Mostly 4 TYPES ke questions aate hain 👇
+🔹 TYPE 1: BASIC UNDERSTANDING
+
+Q: What does your project do?
+A: Real-time vehicle detection, tracking, and speed estimation from video.
+
+Q: Why YOLO?
+A: Because it is fast and suitable for real-time detection.
+
+🔹 TYPE 2: TECHNICAL / ALGORITHM
+
+Q: How is tracking done?
+A: Using centroid-based distance matching.
+
+Q: Speed ka formula?
+A:
+
+𝑆
+𝑝
+𝑒
+𝑒
+𝑑
+=
+𝐷
+𝑖
+𝑠
+𝑡
+𝑎
+𝑛
+𝑐
+𝑒
+𝑇
+𝑖
+𝑚
+𝑒
+Speed=
+Time
+Distance
+	​
+
+
+Q: m/s to km/h?
+A: Multiply by 3.6.
+
+🔹 TYPE 3: LIMITATIONS & CHALLENGES
+
+Q: Limitations?
+A: Occlusion, camera angle dependency, approximate speed.
+
+Q: Why speed is not exact?
+A: Because pixel-to-meter calibration is approximate.
+
+🔹 TYPE 4: IMPROVEMENTS / FUTURE WORK
+
+Q: How can accuracy be improved?
+A: Camera calibration, Kalman Filter, DeepSORT.
+
+Q: Can this run on hardware?
+A: Yes, on FPGA/ASIC after optimization.
+
+5️⃣ ONE-LINE SUPER ANSWERS (YAAD RAKHO 😎)
+
+Detection: YOLOv8
+
+Tracking: Centroid-based custom algorithm
+
+Speed: Distance / Time
+
+Unit Conversion: m/s × 3.6 = km/h
+
+Type: Software-based real-time system
+
+🔥 FINAL INTERVIEW POWER LINE
+
+“This project demonstrates how computer vision can be used to estimate real-world vehicle speed from video using detection, tracking, and temporal analysis.”
