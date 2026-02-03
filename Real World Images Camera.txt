@@ -195,3 +195,111 @@ Type: Software-based real-time system
 🔥 FINAL INTERVIEW POWER LINE
 
 “This project demonstrates how computer vision can be used to estimate real-world vehicle speed from video using detection, tracking, and temporal analysis.”
+
+
+
+
+Bosss 😎🔥
+Whiteboard pe diagram draw karna ek skill hai — simple, fast, aur clean hona chahiye.
+Main tumhe exact sequence + bolne ke words de raha hoon.
+Bas follow karo 💯
+
+🧑‍🏫 WHITEBOARD DIAGRAM – STEP BY STEP
+
+⏱️ Time: 60–90 seconds max
+
+✏️ STEP 1: Title likho (TOP CENTER)
+Real-Time Vehicle Speed Estimation (CV)
+
+
+👉 Bolte jao:
+
+“I’ll explain the system flow using a simple block diagram.”
+
+✏️ STEP 2: Video Input (LEFT SIDE)
++------------------+
+|  Video (MP4)     |
+|  highway.mp4     |
++------------------+
+
+
+👉 Bolna:
+
+“The input to the system is a recorded highway video.”
+
+✏️ STEP 3: Frame Extraction (Right side arrow)
++------------------+
+| Frame Extraction |
+|   (OpenCV)       |
++------------------+
+
+
+👉 Bolna:
+
+“The video is processed frame by frame using OpenCV.”
+
+✏️ STEP 4: Object Detection (MOST IMPORTANT BOX 🔥)
++------------------+
+| Object Detection |
+|     YOLOv8       |
++------------------+
+
+
+👉 Bolna:
+
+“YOLOv8 detects vehicles in each frame and outputs bounding boxes.”
+
+✏️ STEP 5: Object Tracking (CENTER BIG BOX)
++------------------------------+
+| Object Tracking              |
+| Centroid-based Algorithm     |
++------------------------------+
+
+
+👉 Bolna:
+
+“To maintain object identity across frames, I use a centroid-based tracking algorithm.”
+
+✏️ STEP 6: Distance & Time (SMALL BOXES)
++------------------+   +------------------+
+| Distance (pixel) |   | Time (FPS)       |
++------------------+   +------------------+
+
+
+👉 Bolna:
+
+“Object displacement is measured in pixel space and time is derived using FPS.”
+
+✏️ STEP 7: Speed Estimation (FINAL BOX)
++-----------------------------+
+| Speed = Distance / Time     |
+| m/s  →  km/h (×3.6)         |
++-----------------------------+
+
+
+👉 Bolna:
+
+“Speed is computed and converted into km/h.”
+
+✏️ STEP 8: Output (BOTTOM)
++-------------------------------+
+| Output Video                  |
+| Box + ID + Speed              |
++-------------------------------+
+
+
+👉 Bolna:
+
+“The output shows tracked vehicles with their IDs and estimated speed.”
+
+🧠 FULL WHITEBOARD FLOW (FINAL LOOK)
+Video → Frames → YOLOv8 → Tracking → Distance + Time → Speed → Output
+
+🎤 WHAT TO SPEAK WHILE DRAWING (HINGLISH SCRIPT)
+
+“Pehle hum video input lete hain.
+OpenCV se frame extraction hota hai.
+YOLOv8 har frame me vehicles detect karta hai.
+Tracking ke liye centroid-based algorithm use hota hai.
+Frame-to-frame movement se distance aur FPS se time calculate hota hai.
+Finally speed km/h me estimate karke output video pe display hoti hai
